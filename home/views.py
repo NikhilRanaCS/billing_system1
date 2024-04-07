@@ -78,7 +78,7 @@ def logout_user(request):
 def customer(request):
     customers = Customer.objects.all()  # Retrieve all customers from the database
     context = {'customers': customers}  # Pass customers to the template context
-    return render(request, 'Customer.html', context)
+    return render(request, 'customer.html', context)
 
 
 @login_required
