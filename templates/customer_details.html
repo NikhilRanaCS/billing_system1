@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .customer-details {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .detail-label {
+            font-weight: bold;
+        }
+        .detail-value {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back button -->
+<a href="{% url 'customer' %}" class="back-button">Back</a>
+
+    <div class="customer-details">
+        <h2>Customer Details</h2>
+        <div class="detail-label">Customer ID:</div>
+        <div class="detail-value">{{ customer.customer_id }}</div>
+        <div class="detail-label">Name:</div>
+        <div class="detail-value">{{ customer.name }}</div>
+        <div class="detail-label">Age:</div>
+        <div class="detail-value">{{ customer.age }}</div>
+        <div class="detail-label">Email:</div>
+        <div class="detail-value">{{ customer.email }}</div>
+        <div class="detail-label">Phone Number:</div>
+        <div class="detail-value">{{ customer.phn_no }}</div>
+        <div class="detail-label">City:</div>
+        <div class="detail-value">{{ customer.city }}</div>
+        <a href="{% url 'customer' %}">Back to Customer List</a>
+    </div>
+</body>
+</html>
